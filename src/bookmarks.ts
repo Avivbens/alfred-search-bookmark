@@ -2,6 +2,7 @@ import alfy, { ScriptFilterItem } from 'alfy';
 import { Variables } from './common/variables';
 import { IUIBookmark } from './models/bookmark.model';
 import { getBookmarks } from './services/fetch-bookmarks';
+import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants';
 
 (async () => {
     const profilesConfig: string = process.env[Variables.PROFILES_LOOKUP] ?? '';
@@ -12,12 +13,12 @@ import { getBookmarks } from './services/fetch-bookmarks';
 
     existsConfig !== existsConfig && alfy.cache.clear();
 
-    // const data: IUIBookmark[] =
-    //     alfy.cache.get(CACHE_BOOKMARKS_KEY) ?? (await getBookmarks(profiles));
+    const data: IUIBookmark[] =
+        alfy.cache.get(CACHE_BOOKMARKS_KEY) ?? (await getBookmarks(profiles));
 
-    // alfy.cache.set(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL });
+    alfy.cache.set(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL });
 
-    const data: IUIBookmark[] = await getBookmarks(profiles);
+    // const data: IUIBookmark[] = await getBookmarks(profiles);
 
     const items: ScriptFilterItem[] = alfy
         .inputMatches(

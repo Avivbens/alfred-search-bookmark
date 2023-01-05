@@ -52,11 +52,11 @@
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<true/>
+				<false/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string>Searching...</string>
 				<key>script</key>
@@ -104,7 +104,7 @@
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
@@ -138,9 +138,9 @@
 		<key>714025E0-CDE6-4C5B-8A91-81E23A07CFD7</key>
 		<dict>
 			<key>xpos</key>
-			<real>680</real>
+			<real>595</real>
 			<key>ypos</key>
-			<real>260</real>
+			<real>185</real>
 		</dict>
 		<key>CE84ED38-CD11-4B81-9E07-91C9D10EEE3C</key>
 		<dict>
