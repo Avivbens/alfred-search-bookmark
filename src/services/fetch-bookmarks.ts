@@ -46,20 +46,25 @@ export async function getBookmarks(profiles: string[]): Promise<IUIBookmark[]> {
 
 function recursivelyFlatBookmarks(
     bookmarks: IBookmark[],
-    profile: string
+    profile: string,
+    prefix: string = ''
 ): IUIBookmark[] {
     const flatBookmarks: IUIBookmark[] = [];
     bookmarks.forEach(({ name, url, type, children }: IBookmark) => {
         if (type === Type.Folder) {
             flatBookmarks.push(
-                ...recursivelyFlatBookmarks(children ?? [], profile)
+                ...recursivelyFlatBookmarks(
+                    children ?? [],
+                    profile,
+                    `${prefix}${name} > `
+                )
             );
         } else {
             flatBookmarks.push({
-                name,
+                name: `${prefix}${name}`,
                 url: url ?? '',
                 type,
-                profile,
+                profile
             });
         }
     });

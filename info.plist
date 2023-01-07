@@ -12,7 +12,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>714025E0-CDE6-4C5B-8A91-81E23A07CFD7</string>
+				<string>FD52D6DE-838E-4CEF-9D97-F47BAC0D8F71</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -85,69 +85,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>concurrently</key>
 				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
 				<key>escaping</key>
 				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node dist/open-chrome-profile-by-url.js "$1"
-</string>
+				<string>./node_modules/.bin/run-node dist/open-chrome-profile-by-url.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
 				<key>type</key>
 				<integer>5</integer>
-				<key>withspace</key>
-				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>714025E0-CDE6-4C5B-8A91-81E23A07CFD7</string>
+			<string>FD52D6DE-838E-4CEF-9D97-F47BAC0D8F71</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>714025E0-CDE6-4C5B-8A91-81E23A07CFD7</key>
-		<dict>
-			<key>xpos</key>
-			<real>595</real>
-			<key>ypos</key>
-			<real>185</real>
-		</dict>
 		<key>CE84ED38-CD11-4B81-9E07-91C9D10EEE3C</key>
 		<dict>
 			<key>xpos</key>
 			<real>140</real>
 			<key>ypos</key>
 			<real>80</real>
+		</dict>
+		<key>FD52D6DE-838E-4CEF-9D97-F47BAC0D8F71</key>
+		<dict>
+			<key>xpos</key>
+			<real>520</real>
+			<key>ypos</key>
+			<real>330</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
