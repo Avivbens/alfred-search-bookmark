@@ -28,8 +28,8 @@ import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants';
             'name'
         )
         .map(({ name, url, profile }: IUIBookmark) => ({
-            title: `${name} [${profile}]`,
-            subtitle: url,
+            title: name,
+            subtitle: `[${profile}] - ${url}`,
             arg: JSON.stringify({ url, profile })
         }));
 
