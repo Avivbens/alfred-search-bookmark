@@ -30,7 +30,13 @@ import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants';
         .map(({ name, url, profile }: IUIBookmark) => ({
             title: name,
             subtitle: `[${profile}] - ${url}`,
-            arg: JSON.stringify({ url, profile })
+            arg: JSON.stringify({ url, profile }),
+            mods: {
+                cmd: {
+                    subtitle: `Open in Incognito Mode`,
+                    arg: JSON.stringify({ url, profile, incognito: true })
+                }
+            }
         }));
 
     const sliced = items.slice(0, 9);
