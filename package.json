@@ -7,7 +7,7 @@
     "scripts": {
         "build": "rm -rf dist && tsc-esm",
         "start": "node dist/index.js",
-        "postinstall": "alfy-init",
+        "postinstall": "alfy-init && npm run build",
 		"preuninstall": "alfy-cleanup"
     },
     "keywords": [
@@ -22,6 +22,8 @@
         "name": "Aviv Ben Shahar",
         "email": "avivbens87@gmail.com"
     },
+    "publisher": "Aviv Ben Shahar",
+    "homepage": "https://github.com/Avivbens/alfred-search-bookmark",
     "license": "ISC",
     "dependencies": {
         "alfy": "^1.1.0"
