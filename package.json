@@ -7,7 +7,7 @@
     "scripts": {
         "build": "rm -rf dist && tsc-esm",
         "start": "node dist/index.js",
-        "postinstall": "alfy-init && npm run build",
+        "postinstall": "alfy-init",
         "preuninstall": "alfy-cleanup",
         "pre-commit": "pretty-quick --staged && npm run build",
         "prepare": "husky install || exit 0"
