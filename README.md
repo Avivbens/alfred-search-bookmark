@@ -14,14 +14,14 @@ Incognito mode will get opened with the dedicated browser as well.
 ## Examples
 
 ### Search bookmarks with keyword `bm`:
-![Alfred Search Bookmark](./demo/list.png)
+![Alfred Search Bookmark](https://raw.githubusercontent.com/avivbens/alfred-search-bookmark/HEAD/demo/list.png)
 
 <br>
 
 ### Search bookmarks across multiple profiles:
-![Alfred Search Bookmark](./demo/profiles.png)
+![Alfred Search Bookmark](https://raw.githubusercontent.com/avivbens/alfred-search-bookmark/HEAD/demo/profiles.png)
 
 <br>
 
 ### Enter a bookmark via incognito mode:
-![Alfred Search Bookmark](./demo/incognito.png)
+![Alfred Search Bookmark](https://raw.githubusercontent.com/avivbens/alfred-search-bookmark/HEAD/demo/incognito.png)
