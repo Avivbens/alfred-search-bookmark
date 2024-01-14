@@ -1,3 +1,3 @@
 export enum Variables {
-    PROFILES_LOOKUP = 'lookfor_profiles'
+    PROFILES_LOOKUP = 'lookfor_profiles',
 }
