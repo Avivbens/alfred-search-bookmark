@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FA64DD3E-B353-4804-9783-DB856D8D2C4C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C389B829-F331-4C17-8965-A505B0251B7E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Aviv Ben Shahar</string>
@@ -32,6 +45,29 @@
 	<string>Search Bookmarks</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node dist/open-chrome-profile-by-url.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FD52D6DE-838E-4CEF-9D97-F47BAC0D8F71</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -52,7 +88,7 @@
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
-				<false/>
+				<true/>
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
@@ -85,23 +121,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>bmclear</string>
+				<key>subtext</key>
+				<string>Clear bookmarks cache</string>
+				<key>text</key>
+				<string>Clear Cache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>FA64DD3E-B353-4804-9783-DB856D8D2C4C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./node_modules/.bin/run-node dist/open-chrome-profile-by-url.js "$1"</string>
+				<string>./node_modules/.bin/run-node dist/clear-cache.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>11</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>FD52D6DE-838E-4CEF-9D97-F47BAC0D8F71</string>
+			<string>C389B829-F331-4C17-8965-A505B0251B7E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -110,6 +167,13 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>C389B829-F331-4C17-8965-A505B0251B7E</key>
+		<dict>
+			<key>xpos</key>
+			<real>455</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
 		<key>CE84ED38-CD11-4B81-9E07-91C9D10EEE3C</key>
 		<dict>
 			<key>xpos</key>
@@ -117,12 +181,19 @@
 			<key>ypos</key>
 			<real>80</real>
 		</dict>
+		<key>FA64DD3E-B353-4804-9783-DB856D8D2C4C</key>
+		<dict>
+			<key>xpos</key>
+			<real>90</real>
+			<key>ypos</key>
+			<real>350</real>
+		</dict>
 		<key>FD52D6DE-838E-4CEF-9D97-F47BAC0D8F71</key>
 		<dict>
 			<key>xpos</key>
-			<real>520</real>
+			<real>450</real>
 			<key>ypos</key>
-			<real>330</real>
+			<real>80</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -149,8 +220,6 @@
 			<string>lookfor_profiles</string>
 		</dict>
 	</array>
-	<key>variablesdontexport</key>
-	<array/>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
