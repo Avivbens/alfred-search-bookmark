@@ -1,5 +1,6 @@
 import alfy from 'alfy'
 import { CACHE_BOOKMARKS_KEY } from './common/constants.js'
+
 ;(() => {
     alfy.cache.set(CACHE_BOOKMARKS_KEY, null)
 
