@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v1.1.0...v1.1.1) (2024-05-29)
+
+
+### Bug Fixes
+
+* **deps:** bump-up all deps ([402e139](https://github.com/Avivbens/alfred-search-bookmark/commit/402e139a5c2688c3579f144efe7cacce2200f56e))
+* use `execPrm` ([fbecdaa](https://github.com/Avivbens/alfred-search-bookmark/commit/fbecdaa44f142ea5178418b68ce8ab3e8713da8f))
+
 # [1.1.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v1.0.6...v1.1.0) (2024-01-15)
 
 
