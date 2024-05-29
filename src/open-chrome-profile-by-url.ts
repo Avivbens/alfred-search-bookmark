@@ -1,5 +1,9 @@
 import alfy from 'alfy'
-import { exec } from 'child_process'
+import { exec } from 'node:child_process'
+import { promisify } from 'node:util'
+
+const execPrm = promisify(exec)
+
 ;(async () => {
     const { input } = alfy
     const { profile, url, incognito = false }: { profile: string; url: string; incognito: boolean } = JSON.parse(input)
@@ -7,5 +11,5 @@ import { exec } from 'child_process'
     const command = `open -na 'Google Chrome' --args ${
         incognito ? '--incognito' : ''
     } --profile-directory='${profile}' '${url}'`
-    exec(command)
+    await execPrm(command)
 })()

@@ -1,9 +1,10 @@
 import type { ScriptFilterItem } from 'alfy'
 import alfy from 'alfy'
+import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants.js'
 import { Variables } from './common/variables.js'
 import type { IUIBookmark } from './models/bookmark.model.js'
 import { getBookmarks } from './services/fetch-bookmarks.js'
-import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants.js'
+
 ;(async () => {
     const profilesConfig: string = process.env[Variables.PROFILES_LOOKUP] ?? ''
     const profiles: string[] = profilesConfig.split(',')
@@ -16,7 +17,7 @@ import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants.js'
 
     const items: ScriptFilterItem[] = alfy
         .inputMatches(
-            data.map(({ name, url, profile }) => ({ name, url, profile } as any)),
+            data.map(({ name, url, profile }) => ({ name, url, profile }) as any),
             'name',
         )
         .map(({ name, url, profile }: IUIBookmark) => ({
