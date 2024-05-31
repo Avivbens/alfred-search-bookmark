@@ -11,7 +11,7 @@ import { getBookmarks } from './services/fetch-bookmarks.js'
 
     alfy.config.set(Variables.PROFILES_LOOKUP, profilesConfig)
 
-    const data: IUIBookmark[] = alfy.cache.get(CACHE_BOOKMARKS_KEY) ?? (await getBookmarks(profiles))
+    const data: IUIBookmark[] = (alfy.cache.get(CACHE_BOOKMARKS_KEY) as IUIBookmark[]) ?? (await getBookmarks(profiles))
 
     alfy.cache.set(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL })
 
