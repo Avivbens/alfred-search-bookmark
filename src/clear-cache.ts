@@ -1,4 +1,4 @@
-import alfy from 'alfy'
+import { alfy } from '@framework/alfy.js'
 import { CACHE_BOOKMARKS_KEY } from './common/constants.js'
 
 ;(() => {

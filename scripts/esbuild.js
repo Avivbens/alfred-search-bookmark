@@ -10,7 +10,7 @@ const ALL_ASSETS = [
     /**
      * Alfy run-time
      */
-    `./node_modules/.bin/run-node`,
+    `./src/scripts/run-node.sh`,
 ]
 
 const cleanTarget = async () => {
@@ -53,7 +53,20 @@ const copyAssets = async (assets) => {
          * Fix `Error: Dynamic require of "buffer" is not supported` error
          */
         banner: {
-            js: `const require = createRequire(import.meta.url);`,
+            js: `
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+import path22 from 'node:path';
+import url22 from 'node:url';
+
+globalThis.require = createRequire(import.meta.url);
+globalThis.__filename = url22.fileURLToPath(import.meta.url);
+globalThis.__dirname = path22.dirname(__filename);
+
+globalThis.module = {
+  parent: { filename: __filename }
+}
+`,
         },
     })
 

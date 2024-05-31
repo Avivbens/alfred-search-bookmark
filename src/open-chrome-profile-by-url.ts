@@ -1,6 +1,6 @@
-import alfy from 'alfy'
 import { exec } from 'node:child_process'
 import { promisify } from 'node:util'
+import { alfy } from '@framework/alfy.js'
 
 const execPrm = promisify(exec)
 

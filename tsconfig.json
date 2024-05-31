@@ -24,7 +24,10 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": false,
         "target": "ES2021",
-        "useUnknownInCatchVariables": false
+        "useUnknownInCatchVariables": false,
+        "paths": {
+            "@framework/*": ["src/framework/*"]
+        }
     },
     "exclude": ["node_modules", ".eslintrc.cjs"],
     "include": ["src/**/*"]

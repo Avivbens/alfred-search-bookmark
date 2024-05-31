@@ -1,5 +1,4 @@
-import type { ScriptFilterItem } from 'alfy'
-import alfy from 'alfy'
+import { alfy } from '@framework/alfy.js'
 import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants.js'
 import { Variables } from './common/variables.js'
 import type { IUIBookmark } from './models/bookmark.model.js'
@@ -15,12 +14,14 @@ import { getBookmarks } from './services/fetch-bookmarks.js'
 
     alfy.cache.set(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL })
 
-    const items: ScriptFilterItem[] = alfy
+    data.map(({ name, url, profile }) => ({ name, url, profile }) as any).filter(({ name }) => name === alfy.input)
+
+    const items = alfy
         .inputMatches(
-            data.map(({ name, url, profile }) => ({ name, url, profile }) as any),
-            'name',
+            data.map(({ name, url, profile }) => ({ name, url, profile })),
+            ({ name }) => name,
         )
-        .map(({ name, url, profile }: IUIBookmark) => ({
+        .map(({ name, url, profile }) => ({
             title: name,
             subtitle: `[${profile}] - ${url}`,
             arg: JSON.stringify({ url, profile }),

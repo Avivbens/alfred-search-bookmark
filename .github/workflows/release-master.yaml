@@ -62,7 +62,7 @@ jobs:
               uses: ./.github/workflows/install
 
             - name: Build
-              run: npm run build
+              run: npm run esbuild
 
             - name: Setup NPM
               run: |

@@ -53,7 +53,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./esbuild/assets/run-node esbuild/open-chrome-profile-by-url.js "$1"</string>
+				<string>./esbuild/assets/run-node.sh esbuild/open-chrome-profile-by-url.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -96,7 +96,7 @@
 				<key>runningsubtext</key>
 				<string>Searching...</string>
 				<key>script</key>
-				<string>./esbuild/assets/run-node esbuild/bookmarks.js "$1"
+				<string>./esbuild/assets/run-node.sh esbuild/bookmarks.js "$1"
 </string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -147,7 +147,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./esbuild/assets/run-node esbuild/clear-cache.js "$1"</string>
+				<string>./esbuild/assets/run-node.sh esbuild/clear-cache.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

@@ -35,13 +35,16 @@
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "lint": "eslint \"{src,test}/**/*.ts\"",
         "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
+        "pack": "npm run esbuild && ./scripts/alfred-workflow.builder.sh",
         "prepare": "husky || exit 0",
         "prepublish": "npm run build",
         "start:dev": "node dist/index.js --inspect",
         "test": "jest"
     },
     "dependencies": {
-        "alfy": "^2.0.0"
+        "alfred-config": "^0.2.3",
+        "cache-conf": "^0.6.0",
+        "conf": "^12.0.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^18.4.3",
