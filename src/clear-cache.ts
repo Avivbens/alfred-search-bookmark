@@ -1,13 +1,17 @@
-import { alfy } from '@framework/alfy.js'
+import { FastAlfred } from 'fast-alfred'
 import { CACHE_BOOKMARKS_KEY } from './common/constants.js'
 
 ;(() => {
-    alfy.cache.set(CACHE_BOOKMARKS_KEY, null)
+    const alfredClient = new FastAlfred()
 
-    alfy.output([
-        {
-            title: 'Cache Cleared ✅',
-            subtitle: 'Bookmarks will be re-fetched on next use',
-        },
-    ])
+    alfredClient.cache.delete(CACHE_BOOKMARKS_KEY)
+
+    alfredClient.output({
+        items: [
+            {
+                title: 'Cache Cleared ✅',
+                subtitle: 'Bookmarks will be re-fetched on next use',
+            },
+        ],
+    })
 })()

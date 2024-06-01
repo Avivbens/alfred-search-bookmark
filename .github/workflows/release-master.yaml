@@ -61,14 +61,44 @@ jobs:
             - name: 🖥️ Setup Env
               uses: ./.github/workflows/install
 
-            - name: Build
-              run: npm run esbuild
-
             - name: Setup NPM
               run: |
                   npm config -L user set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
+            # -------------------------
+            # Check next version
+            # -------------------------
+
+            - name: 🆚 Extract Next Release Version
+              id: extract-version
+              run: |
+                  npx semantic-release --no-ci --dry-run --plugins @semantic-release/commit-analyzer,@semantic-release/release-notes-generator > output.txt
+
+                  NEXT_VERSION=$(cat output.txt \
+                  | grep "The next release version is" \
+                  | node -e "console.log(require('fs').readFileSync(0, 'utf-8').match(/The next release version is (\d+\.\d+\.\d+(-beta\.\d+)?)/)?.[1] ?? '')")
+
+                  echo "version=$NEXT_VERSION" >> $GITHUB_OUTPUT
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+            # -------------------------
+            # Bail out if no version
+            # -------------------------
+
+            - name: 🔨 Build Package
+              if: steps.extract-version.outputs.version != ''
+              run: |
+                  # update package.json version - for packing purposes
+                  node -e "const fs = require('fs'); \
+                  const pkg = require('./package.json'); \
+                  pkg.version = '${{ steps.extract-version.outputs.version }}'; \
+                  fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 4));"
+
+                  npm run pack '${{ steps.extract-version.outputs.version }}'
+
             - name: Release
+              if: steps.extract-version.outputs.version != ''
               env:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GIT_AUTHOR_NAME: github-bot

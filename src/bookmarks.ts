@@ -1,22 +1,25 @@
-import { alfy } from '@framework/alfy.js'
+import { FastAlfred } from 'fast-alfred'
 import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from './common/constants.js'
 import { Variables } from './common/variables.js'
 import type { IUIBookmark } from './models/bookmark.model.js'
 import { getBookmarks } from './services/fetch-bookmarks.js'
 
 ;(async () => {
-    const profilesConfig: string = process.env[Variables.PROFILES_LOOKUP] ?? ''
+    const alfredClient = new FastAlfred()
+
+    const profilesConfig: string = alfredClient.env.getEnv(Variables.PROFILES_LOOKUP, { defaultValue: '' })
+    const sliceAmount: number = alfredClient.env.getEnv(Variables.SLICE_AMOUNT, { defaultValue: 10, parser: Number })
+
     const profiles: string[] = profilesConfig.split(',')
 
-    alfy.config.set(Variables.PROFILES_LOOKUP, profilesConfig)
+    alfredClient.config.set(Variables.PROFILES_LOOKUP, profilesConfig)
 
-    const data: IUIBookmark[] = (alfy.cache.get(CACHE_BOOKMARKS_KEY) as IUIBookmark[]) ?? (await getBookmarks(profiles))
+    const data: IUIBookmark[] =
+        (alfredClient.cache.get(CACHE_BOOKMARKS_KEY) as IUIBookmark[]) ?? (await getBookmarks(profiles))
 
-    alfy.cache.set(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL })
+    alfredClient.cache.setWithTTL(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL })
 
-    data.map(({ name, url, profile }) => ({ name, url, profile }) as any).filter(({ name }) => name === alfy.input)
-
-    const items = alfy
+    const items = alfredClient
         .inputMatches(
             data.map(({ name, url, profile }) => ({ name, url, profile })),
             ({ name }) => name,
@@ -33,7 +36,7 @@ import { getBookmarks } from './services/fetch-bookmarks.js'
             },
         }))
 
-    const sliced = items.slice(0, 9)
+    const sliced = items.slice(0, sliceAmount)
 
-    alfy.output(sliced)
+    alfredClient.output({ items: sliced })
 })()

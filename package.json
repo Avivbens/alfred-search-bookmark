@@ -31,20 +31,17 @@
     "scripts": {
         "prebuild": "rm -rf ./dist",
         "build": "tsc -p tsconfig.json",
-        "esbuild": "node ./scripts/esbuild.js",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "lint": "eslint \"{src,test}/**/*.ts\"",
         "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
-        "pack": "npm run esbuild && ./scripts/alfred-workflow.builder.sh",
+        "pack": "fast-alfred",
         "prepare": "husky || exit 0",
         "prepublish": "npm run build",
         "start:dev": "node dist/index.js --inspect",
         "test": "jest"
     },
     "dependencies": {
-        "alfred-config": "^0.2.3",
-        "cache-conf": "^0.6.0",
-        "conf": "^12.0.0"
+        "fast-alfred": "^1.0.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^18.4.3",
@@ -82,7 +79,7 @@
         "typescript": "^5.2.2"
     },
     "engines": {
-        "node": ">=16.0.0"
+        "node": ">=18.0.0"
     },
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
