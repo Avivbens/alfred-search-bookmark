@@ -1,5 +1,5 @@
 import { FastAlfred } from 'fast-alfred'
-import { CACHE_BOOKMARKS_KEY } from './common/constants.js'
+import { CACHE_BOOKMARKS_KEY } from '@common/constants.js'
 
 ;(() => {
     const alfredClient = new FastAlfred()

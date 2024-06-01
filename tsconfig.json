@@ -24,7 +24,12 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": false,
         "target": "ES2021",
-        "useUnknownInCatchVariables": false
+        "useUnknownInCatchVariables": false,
+        "paths": {
+            "@common/*": ["src/common/*"],
+            "@models/*": ["src/models/*"],
+            "@services/*": ["src/services/*"]
+        }
     },
     "exclude": ["node_modules", ".eslintrc.cjs"],
     "include": ["src/**/*"]
