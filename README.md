@@ -21,12 +21,16 @@ Search browser bookmarks with [Alfred](https://www.alfredapp.com/).
 Search browser bookmarks via the keyword `bm`.
 Once you select a bookmark, it will be opened in the dedicated browser.
 
-Incognito mode will get opened with the dedicated browser as well.
+Incognito mode will be opened with the dedicated browser as well.
 
-To activate, **install globally via npm**:
+### Install via GitHub Releases :sparkles:
 
 ```bash
-npm i -g alfred-search-bookmark
+repo_name="Avivbens/alfred-search-bookmark"
+download_url=$(curl -s "https://api.github.com/repos/$repo_name/releases/latest" | grep "browser_download_url.*alfredworkflow" | cut -d '"' -f 4)
+
+curl -fsSLk $download_url -o ~/Desktop/alfred-search-bookmark.alfredworkflow
+open ~/Desktop/alfred-search-bookmark.alfredworkflow
 ```
 
 <hr>
