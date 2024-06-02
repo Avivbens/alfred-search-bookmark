@@ -1,13 +1,14 @@
+<div align="center">
+
 # Alfred Search Bookmark
 
-> [!CAUTION]
-> This NPM is no longer supported. Please use GitHub releases instead [in here](https://github.com/Avivbens/alfred-search-bookmark/releases/latest).
+<br>
 
-<div align=center>
+[![Latest Version Downloads](https://img.shields.io/github/downloads/avivbens/alfred-search-bookmark/latest/total?label=Latest%20Version%20Downloads&color=green)](https://github.com/avivbens/alfred-search-bookmark/releases/latest)
+[![Latest Version](https://img.shields.io/github/v/release/avivbens/alfred-search-bookmark?label=Latest%20Version&color=green)](https://github.com/avivbens/alfred-search-bookmark/releases/latest)
+[![Total Downloads](https://img.shields.io/github/downloads/avivbens/alfred-search-bookmark/total?label=Total%20Downloads&color=blue)](https://github.com/avivbens/alfred-search-bookmark/releases)
 
-[![npm](https://img.shields.io/npm/v/alfred-search-bookmark)](https://www.npmjs.com/package/alfred-search-bookmark)
-[![npm](https://img.shields.io/npm/dt/alfred-search-bookmark)](https://www.npmjs.com/package/alfred-search-bookmark)
-![GitHub](https://img.shields.io/github/license/avivbens/alfred-search-bookmark)
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/kcao7snkgx)
 
 </div>
 
