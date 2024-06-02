@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.1...v2.0.2) (2024-06-02)
+
+
+### Bug Fixes
+
+* add description for `info.plist` file ([4114cbf](https://github.com/Avivbens/alfred-search-bookmark/commit/4114cbf042b0aae637ffa1b7528d8b7a2b5d945c))
+
 ## [2.0.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.0...v2.0.1) (2024-06-02)
 
 
