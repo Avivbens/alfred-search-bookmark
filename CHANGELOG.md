@@ -1,3 +1,24 @@
+# [2.0.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v1.1.3...v2.0.0) (2024-06-02)
+
+
+### Bug Fixes
+
+* drop `alfy` dependency - all logic implemented over this repo ([b1de770](https://github.com/Avivbens/alfred-search-bookmark/commit/b1de77047bd0981a5a72851b569c37b3fda9a44a))
+
+
+### Features
+
+* migrate to `FastAlfred` ✨ ([d1eee68](https://github.com/Avivbens/alfred-search-bookmark/commit/d1eee6843e5315dbfc566b5da0c492c00a929792))
+* support `esbuild` system - replace need for npm ✨ ([16c7641](https://github.com/Avivbens/alfred-search-bookmark/commit/16c7641b106acb52f0d4743692e951f83365bccf))
+
+
+### BREAKING CHANGES
+
+* `esbuild` is now the default system for building the project.
+This means that `npm` is no longer suported, and the `npm` scripts have been removed.
+
+Please install the workflow via GitHub Releases files 🥷
+
 ## [1.1.3](https://github.com/Avivbens/alfred-search-bookmark/compare/v1.1.2...v1.1.3) (2024-06-02)
 
 ### Bug Fixes
