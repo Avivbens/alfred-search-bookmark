@@ -19,6 +19,7 @@
         "rootDir": "./src",
         "skipLibCheck": true,
         "sourceMap": true,
+        "resolveJsonModule": true,
         "strict": true,
         "strictBindCallApply": true,
         "strictNullChecks": true,

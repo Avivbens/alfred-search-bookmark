@@ -1,7 +1,7 @@
 {
     "name": "alfred-search-bookmark",
     "version": "2.0.2",
-    "description": "Alfred Workflow to search bookmarks in Chrome, support multi-profile",
+    "description": "Search across your bookmarks from all your Chrome profiles in Alfred",
     "keywords": [
         "alfred",
         "workflow",
@@ -41,7 +41,7 @@
         "test": "jest"
     },
     "dependencies": {
-        "fast-alfred": "^1.0.0"
+        "fast-alfred": "^1.1.1"
     },
     "devDependencies": {
         "@commitlint/cli": "^18.4.3",
