@@ -15,10 +15,8 @@ To get started, follow these steps:
 1. Test your changes locally:
 
 ```bash
-npm run pack
-(cd esbuild && open .)
-
-# Double-click on the generated `alfred-search-bookmark.alfredworkflow` file
+npm run pack $(cat package.json | jq -r '.version')
+(cd esbuild && open alfred-search-bookmark.alfredworkflow)
 ```
 
 6. Review your changes with your Alfred app
