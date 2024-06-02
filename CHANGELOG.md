@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.2...v2.0.3) (2024-06-02)
+
+
+### Bug Fixes
+
+* use `fast-alfred` mechanism for `info.plist` file ([f1ad476](https://github.com/Avivbens/alfred-search-bookmark/commit/f1ad476a5293d5c0b338da8fae7d9b24da4f00bf))
+
 ## [2.0.2](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.1...v2.0.2) (2024-06-02)
 
 
