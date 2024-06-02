@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/Avivbens/alfred-search-bookmark/compare/v1.1.2...v1.1.3) (2024-06-02)
+
+
+### Bug Fixes
+
+* deprecate NPM deployment - fix readme ([f78c293](https://github.com/Avivbens/alfred-search-bookmark/commit/f78c29376c80af2a8e7a11abdb6380531a16266e))
+
 ## [1.1.2](https://github.com/Avivbens/alfred-search-bookmark/compare/v1.1.1...v1.1.2) (2024-06-02)
 
 
