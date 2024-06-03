@@ -22,4 +22,5 @@ module.exports = {
         description,
         readme: README,
     },
+    tabSize: 4,
 }
