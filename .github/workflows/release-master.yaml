@@ -86,15 +86,9 @@ jobs:
             # Bail out if no version
             # -------------------------
 
-            - name: 🔨 Build Package
+            - name: 🔨 Fast Alfred Package 🚀
               if: steps.extract-version.outputs.version != ''
               run: |
-                  # update package.json version - for packing purposes
-                  node -e "const fs = require('fs'); \
-                  const pkg = require('./package.json'); \
-                  pkg.version = '${{ steps.extract-version.outputs.version }}'; \
-                  fs.writeFileSync('./package.json', JSON.stringify(pkg, null, 4));"
-
                   npm run pack '${{ steps.extract-version.outputs.version }}'
 
             - name: Release
