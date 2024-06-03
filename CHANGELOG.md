@@ -1,3 +1,10 @@
+## [2.0.4](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.3...v2.0.4) (2024-06-03)
+
+
+### Bug Fixes
+
+* latest `fast-alfred` 🥷 ([b6812de](https://github.com/Avivbens/alfred-search-bookmark/commit/b6812dee8a8ed136f896ab9b303e50f66c0b279e))
+
 ## [2.0.3](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.2...v2.0.3) (2024-06-02)
 
 
