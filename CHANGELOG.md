@@ -1,3 +1,10 @@
+## [2.0.5](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.4...v2.0.5) (2024-06-03)
+
+
+### Bug Fixes
+
+* using `fast-alfred` CLI ([e612659](https://github.com/Avivbens/alfred-search-bookmark/commit/e6126590c20585faa2fc1ee9187414c99bc5ac36))
+
 ## [2.0.4](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.3...v2.0.4) (2024-06-03)
 
 
