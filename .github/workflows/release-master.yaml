@@ -65,34 +65,7 @@ jobs:
               run: |
                   npm config -L user set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
-            # -------------------------
-            # Check next version
-            # -------------------------
-
-            - name: 🆚 Extract Next Release Version
-              id: extract-version
-              run: |
-                  npx semantic-release --no-ci --dry-run --plugins @semantic-release/commit-analyzer,@semantic-release/release-notes-generator > output.txt
-
-                  NEXT_VERSION=$(cat output.txt \
-                  | grep "The next release version is" \
-                  | node -e "console.log(require('fs').readFileSync(0, 'utf-8').match(/The next release version is (\d+\.\d+\.\d+(-beta\.\d+)?)/)?.[1] ?? '')")
-
-                  echo "version=$NEXT_VERSION" >> $GITHUB_OUTPUT
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
-            # -------------------------
-            # Bail out if no version
-            # -------------------------
-
-            - name: 🔨 Fast Alfred Package 🚀
-              if: steps.extract-version.outputs.version != ''
-              run: |
-                  npm run pack '${{ steps.extract-version.outputs.version }}'
-
             - name: Release
-              if: steps.extract-version.outputs.version != ''
               env:
                   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GIT_AUTHOR_NAME: github-bot
