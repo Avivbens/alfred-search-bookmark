@@ -28,7 +28,7 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "npx fast-alfred ${nextRelease.version}"
+                "prepareCmd": "npx fast-alfred -t ${nextRelease.version}"
             }
         ],
         [
