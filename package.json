@@ -1,6 +1,6 @@
 {
     "name": "alfred-search-bookmark",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "Search across your bookmarks from all your Chrome profiles in Alfred",
     "keywords": [
         "alfred",

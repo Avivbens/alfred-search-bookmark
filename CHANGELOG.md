@@ -1,3 +1,11 @@
+## [2.0.6](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.5...v2.0.6) (2024-06-06)
+
+
+### Bug Fixes
+
+* bump-up `fast-alfred` ([f7d0ea7](https://github.com/Avivbens/alfred-search-bookmark/commit/f7d0ea7fad1d7a90e706e9bdcaf13a54e0636682))
+* remove unused code ([e0eb3b4](https://github.com/Avivbens/alfred-search-bookmark/commit/e0eb3b4181e6faa8058f29a82e7421a8519227b9))
+
 ## [2.0.5](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.4...v2.0.5) (2024-06-03)
 
 
