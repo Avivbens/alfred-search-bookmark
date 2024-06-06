@@ -15,7 +15,7 @@ To get started, follow these steps:
 1. Test your changes locally:
 
 ```bash
-npm run pack $(cat package.json | jq -r '.version')
+npx fast-alfred -t $(cat package.json | jq -r '.version')
 (cd esbuild && open alfred-search-bookmark.alfredworkflow)
 ```
 
@@ -26,7 +26,7 @@ npm run pack $(cat package.json | jq -r '.version')
 You can use the following command, in order to trigger build & pack for each save :sparkles:
 
 ```bash
-find ./src -type f -name "*.ts" | entr -s "npm run pack"
+find ./src -type f -name "*.ts" | entr -s "npx fast-alfred -t $(cat package.json | jq -r '.version')"
 ```
 
 <br>

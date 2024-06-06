@@ -1,3 +1,4 @@
+import type { AlfredScriptFilter } from 'fast-alfred'
 import { FastAlfred } from 'fast-alfred'
 import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from '@common/constants.js'
 import { Variables } from '@common/variables.js'
@@ -12,14 +13,12 @@ import { getBookmarks } from '@services/fetch-bookmarks.js'
 
     const profiles: string[] = profilesConfig.split(',')
 
-    alfredClient.config.set(Variables.PROFILES_LOOKUP, profilesConfig)
-
     const data: IUIBookmark[] =
-        (alfredClient.cache.get(CACHE_BOOKMARKS_KEY) as IUIBookmark[]) ?? (await getBookmarks(profiles))
+        alfredClient.cache.get<IUIBookmark[]>(CACHE_BOOKMARKS_KEY) ?? (await getBookmarks(profiles))
 
     alfredClient.cache.setWithTTL(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL })
 
-    const items = alfredClient
+    const items: AlfredScriptFilter['items'] = alfredClient
         .inputMatches(
             data.map(({ name, url, profile }) => ({ name, url, profile })),
             ({ name }) => name,
