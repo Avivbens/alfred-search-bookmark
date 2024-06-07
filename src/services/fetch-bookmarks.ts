@@ -1,7 +1,7 @@
 import { readFile } from 'fs/promises'
 import { join } from 'path'
-import type { IBookmark, IBookmarkRes, IUIBookmark } from '../models/bookmark.model.js'
-import { Type } from '../models/bookmark.model.js'
+import type { IBookmark, IBookmarkRes, IUIBookmark } from '../models/bookmark.model'
+import { Type } from '../models/bookmark.model'
 
 const BOOKMARKS_PATH = (profiles: string[]): string[] =>
     profiles.map((profileName) =>

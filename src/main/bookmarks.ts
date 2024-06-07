@@ -1,9 +1,9 @@
 import type { AlfredScriptFilter } from 'fast-alfred'
 import { FastAlfred } from 'fast-alfred'
-import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from '@common/constants.js'
-import { Variables } from '@common/variables.js'
-import type { IUIBookmark } from '@models/bookmark.model.js'
-import { getBookmarks } from '@services/fetch-bookmarks.js'
+import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from '@common/constants'
+import { Variables } from '@common/variables'
+import type { IUIBookmark } from '@models/bookmark.model'
+import { getBookmarks } from '@services/fetch-bookmarks'
 
 ;(async () => {
     const alfredClient = new FastAlfred()
