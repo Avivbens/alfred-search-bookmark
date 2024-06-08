@@ -39,7 +39,8 @@
         "test": "jest"
     },
     "dependencies": {
-        "fast-alfred": "^2.0.0"
+        "fast-alfred": "^2.0.0",
+        "fuse.js": "^7.0.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^18.4.3",
