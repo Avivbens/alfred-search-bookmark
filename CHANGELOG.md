@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.6...v2.1.0) (2024-06-08)
+
+
+### Bug Fixes
+
+* install latest `fast-alfred` 🥷 ([6139472](https://github.com/Avivbens/alfred-search-bookmark/commit/61394723514a80f12b6e89392557754cdc328d0d))
+* move to `cjs` moduling ([399b2da](https://github.com/Avivbens/alfred-search-bookmark/commit/399b2da48e596e2cd3abf5491a2948ae20bd10ab))
+
+
+### Features
+
+* support fuzzy search across all bookmarks 🥷 ([ec33acb](https://github.com/Avivbens/alfred-search-bookmark/commit/ec33acb52f476834547e9094ea17efbfa8eb49c1))
+
 ## [2.0.6](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.5...v2.0.6) (2024-06-06)
 
 
