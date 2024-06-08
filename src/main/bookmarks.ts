@@ -1,9 +1,10 @@
 import type { AlfredScriptFilter } from 'fast-alfred'
 import { FastAlfred } from 'fast-alfred'
-import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from '@common/constants.js'
-import { Variables } from '@common/variables.js'
-import type { IUIBookmark } from '@models/bookmark.model.js'
-import { getBookmarks } from '@services/fetch-bookmarks.js'
+import { CACHE_BOOKMARKS_KEY, CACHE_TTL } from '@common/constants'
+import { Variables } from '@common/variables'
+import type { IUIBookmark } from '@models/bookmark.model'
+import { getBookmarks } from '@services/fetch-bookmarks'
+import { searchBookmarks } from '@services/search.service'
 
 ;(async () => {
     const alfredClient = new FastAlfred()
@@ -13,27 +14,25 @@ import { getBookmarks } from '@services/fetch-bookmarks.js'
 
     const profiles: string[] = profilesConfig.split(',')
 
-    const data: IUIBookmark[] =
-        alfredClient.cache.get<IUIBookmark[]>(CACHE_BOOKMARKS_KEY) ?? (await getBookmarks(profiles))
+    let bookmarks: IUIBookmark[] | null = alfredClient.cache.get<IUIBookmark[]>(CACHE_BOOKMARKS_KEY)
+    if (!bookmarks) {
+        bookmarks = await getBookmarks(profiles)
+        alfredClient.cache.setWithTTL(CACHE_BOOKMARKS_KEY, bookmarks, { maxAge: CACHE_TTL })
+    }
 
-    alfredClient.cache.setWithTTL(CACHE_BOOKMARKS_KEY, data, { maxAge: CACHE_TTL })
+    const filteredBookmarks = await searchBookmarks(bookmarks, alfredClient.input, sliceAmount)
 
-    const items: AlfredScriptFilter['items'] = alfredClient
-        .inputMatches(
-            data.map(({ name, url, profile }) => ({ name, url, profile })),
-            ({ name }) => name,
-        )
-        .map(({ name, url, profile }) => ({
-            title: name,
-            subtitle: `[${profile}] - ${url}`,
-            arg: JSON.stringify({ url, profile }),
-            mods: {
-                cmd: {
-                    subtitle: `Open in Incognito Mode`,
-                    arg: JSON.stringify({ url, profile, incognito: true }),
-                },
+    const items: AlfredScriptFilter['items'] = filteredBookmarks.map(({ name, url, profile }) => ({
+        title: name,
+        subtitle: `[${profile}] - ${url}`,
+        arg: JSON.stringify({ url, profile }),
+        mods: {
+            cmd: {
+                subtitle: `Open in Incognito Mode`,
+                arg: JSON.stringify({ url, profile, incognito: true }),
             },
-        }))
+        },
+    }))
 
     const sliced = items.slice(0, sliceAmount)
 
