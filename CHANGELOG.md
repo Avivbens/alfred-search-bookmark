@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.0...v2.1.1) (2024-06-08)
+
+
+### Bug Fixes
+
+* remove `prefs` file ([248f52c](https://github.com/Avivbens/alfred-search-bookmark/commit/248f52c51fcd8e05baa0cc7b40045b63713be25c))
+
 # [2.1.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.0.6...v2.1.0) (2024-06-08)
 
 
