@@ -32,6 +32,7 @@ import { searchBookmarks } from '@services/search.service'
                 arg: JSON.stringify({ url, profile, incognito: true }),
             },
         },
+        uid: url,
     }))
 
     const sliced = items.slice(0, sliceAmount)
