@@ -16,12 +16,11 @@
 
 Search browser bookmarks with [Alfred](https://www.alfredapp.com/).
 
-## Usage
+### Fuzzy Search
 
-Search browser bookmarks via the keyword `bm`.
-Once you select a bookmark, it will be opened in the dedicated browser.
+We support fuzzy search :ninja:
 
-Incognito mode will be opened with the dedicated browser as well.
+You can search bookmarks by name or URL, and we will find the best match for you.
 
 ### Install via GitHub Releases :sparkles:
 
@@ -32,6 +31,13 @@ download_url=$(curl -s "https://api.github.com/repos/$repo_name/releases/latest"
 curl -fsSLk $download_url -o ~/Desktop/alfred-search-bookmark.alfredworkflow
 open ~/Desktop/alfred-search-bookmark.alfredworkflow
 ```
+
+## Usage
+
+Search browser bookmarks via the keyword `bm`.
+Once you select a bookmark, it will be opened in the dedicated browser.
+
+Incognito mode will be opened with the dedicated browser as well.
 
 <hr>
 
