@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.2...v2.1.3) (2024-06-09)
+
+
+### Bug Fixes
+
+* set `uid` to include profile ([5f0b376](https://github.com/Avivbens/alfred-search-bookmark/commit/5f0b376c2109201944fadbb69b0cce7608a02b77))
+
 ## [2.1.2](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.1...v2.1.2) (2024-06-09)
 
 
