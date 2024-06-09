@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.1...v2.1.2) (2024-06-09)
+
+
+### Bug Fixes
+
+* add `uid` to allow alfred knowledge ([e2b2508](https://github.com/Avivbens/alfred-search-bookmark/commit/e2b250889fbaed4a6861a0d5614f9aae5ee38b32))
+
 ## [2.1.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.0...v2.1.1) (2024-06-08)
 
 
