@@ -22,18 +22,22 @@ import { searchBookmarks } from '@services/search.service'
 
     const filteredBookmarks = await searchBookmarks(bookmarks, alfredClient.input, sliceAmount)
 
-    const items: AlfredScriptFilter['items'] = filteredBookmarks.map(({ name, url, profile }) => ({
-        title: name,
-        subtitle: `[${profile}] - ${url}`,
-        arg: JSON.stringify({ url, profile }),
-        mods: {
-            cmd: {
-                subtitle: `Open in Incognito Mode`,
-                arg: JSON.stringify({ url, profile, incognito: true }),
+    const items: AlfredScriptFilter['items'] = filteredBookmarks.map(({ name, url, profile }) => {
+        const subtitle = `[${profile}] - ${url}`
+
+        return {
+            title: name,
+            subtitle,
+            arg: JSON.stringify({ url, profile }),
+            mods: {
+                cmd: {
+                    subtitle: `Open in Incognito Mode`,
+                    arg: JSON.stringify({ url, profile, incognito: true }),
+                },
             },
-        },
-        uid: url,
-    }))
+            uid: subtitle,
+        }
+    })
 
     const sliced = items.slice(0, sliceAmount)
 
