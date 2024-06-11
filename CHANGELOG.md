@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.4...v2.2.0) (2024-06-11)
+
+
+### Features
+
+* support no close after opening bookmark ([a867588](https://github.com/Avivbens/alfred-search-bookmark/commit/a8675880b8e48bca0b2d1705383dc3a82760dc96))
+
 ## [2.1.4](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.3...v2.1.4) (2024-06-11)
 
 
