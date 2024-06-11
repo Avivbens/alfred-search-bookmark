@@ -1,5 +1,5 @@
-import type { IUIBookmark } from '@models/bookmark.model.js'
-import { SEARCH_FIELDS_CONFIG } from './search.config.js'
+import type { IUIBookmark } from '@models/bookmark.model'
+import { SEARCH_FIELDS_CONFIG } from './search.config'
 
 export async function searchBookmarks(
     bookmarks: IUIBookmark[],
