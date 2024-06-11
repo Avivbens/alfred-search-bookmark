@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.3...v2.1.4) (2024-06-11)
+
+
+### Bug Fixes
+
+* add global error handler ([1b1cc44](https://github.com/Avivbens/alfred-search-bookmark/commit/1b1cc4410c6897324e37f8e9833b2127402fb35c))
+
 ## [2.1.3](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.2...v2.1.3) (2024-06-09)
 
 
