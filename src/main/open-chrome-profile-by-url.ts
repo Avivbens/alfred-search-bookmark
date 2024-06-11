@@ -13,7 +13,7 @@ const execPrm = promisify(exec)
         incognito = false,
     }: { profile: string; url: string; incognito: boolean } = JSON.parse(alfredClient.input)
 
-    const command = `open -na 'Google Chrome' --args ${
+    const command = `open -g -na 'Google Chrome' --args ${
         incognito ? '--incognito' : ''
     } --profile-directory='${profile}' '${url}'`
     await execPrm(command)
