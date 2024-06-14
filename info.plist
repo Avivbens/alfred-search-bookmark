@@ -59,7 +59,7 @@
           <key>scriptfile</key>
           <string></string>
           <key>type</key>
-          <integer>5</integer>
+          <integer>11</integer>
         </dict>
         <key>type</key>
         <string>alfred.workflow.action.script</string>
@@ -107,7 +107,7 @@
           <key>title</key>
           <string>Search for Bookmarks...</string>
           <key>type</key>
-          <integer>5</integer>
+          <integer>11</integer>
           <key>withspace</key>
           <true></true>
         </dict>
