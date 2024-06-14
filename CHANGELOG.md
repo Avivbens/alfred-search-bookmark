@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.2.0...v2.2.1) (2024-06-14)
+
+
+### Bug Fixes
+
+* bump-up `fast-alfred`, align to Alfred best-practices ([11ea0cd](https://github.com/Avivbens/alfred-search-bookmark/commit/11ea0cd531eda2e59ed095908a0033ce5e4fad47))
+
 # [2.2.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.1.4...v2.2.0) (2024-06-11)
 
 
