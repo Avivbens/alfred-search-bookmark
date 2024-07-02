@@ -15,6 +15,11 @@ import { searchBookmarks } from '@services/search.service'
         parser: Number,
     })
 
+    const fuzzyThreshold: number = alfredClient.env.getEnv(Variables.FUZZY_THRESHOLD, {
+        defaultValue: 0.4,
+        parser: (input) => Number(input) / 10,
+    })
+
     const profiles: string[] = profilesConfig.split(',')
 
     try {
@@ -24,7 +29,7 @@ import { searchBookmarks } from '@services/search.service'
             alfredClient.cache.setWithTTL(CACHE_BOOKMARKS_KEY, bookmarks, { maxAge: CACHE_TTL })
         }
 
-        const filteredBookmarks = await searchBookmarks(bookmarks, alfredClient.input, sliceAmount)
+        const filteredBookmarks = await searchBookmarks(bookmarks, alfredClient.input, sliceAmount, fuzzyThreshold)
 
         const items: AlfredScriptFilter['items'] = filteredBookmarks.map(({ name, url, profile }) => {
             const subtitle = `[${profile}] - ${url}`
