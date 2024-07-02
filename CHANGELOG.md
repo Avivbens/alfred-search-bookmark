@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.2.1...v2.3.0) (2024-07-02)
+
+
+### Features
+
+* support dynamic fuzzy threshold ([bbe2f31](https://github.com/Avivbens/alfred-search-bookmark/commit/bbe2f3127f2c0b5694674ba00ecc0d411bebcaa6))
+
 ## [2.2.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.2.0...v2.2.1) (2024-06-14)
 
 
