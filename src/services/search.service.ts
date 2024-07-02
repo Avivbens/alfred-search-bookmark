@@ -5,6 +5,7 @@ export async function searchBookmarks(
     bookmarks: IUIBookmark[],
     searchTerm: string,
     limit: number,
+    threshold: number,
 ): Promise<IUIBookmark[]> {
     const Fuse = (await import('fuse.js/min-basic')).default
 
@@ -12,7 +13,7 @@ export async function searchBookmarks(
         keys: SEARCH_FIELDS_CONFIG,
         isCaseSensitive: false,
         shouldSort: true,
-        threshold: 0.4,
+        threshold,
     })
 
     const res = fuse.search(searchTerm, { limit })
