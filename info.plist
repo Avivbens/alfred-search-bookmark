@@ -216,7 +216,7 @@ https://github.com/Avivbens/alfred-search-bookmark</string>
           <true></true>
         </dict>
         <key>description</key>
-        <string>Add your profiles separateed by a comma (,). Exists under `/Library/Application Support/Google/Chrome`</string>
+        <string>Add your profiles separateed by a comma (,). Exists under `~/Library/Application Support/Google/Chrome`. Would be `Profile {number}` or `Default`</string>
         <key>label</key>
         <string>Profiles to look for</string>
         <key>type</key>
