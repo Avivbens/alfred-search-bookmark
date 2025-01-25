@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.3.1...v2.3.2) (2025-01-25)
+
+
+### Bug Fixes
+
+* upgrade fast-alfred from 2.1.2 to 2.2.0 ([e12828c](https://github.com/Avivbens/alfred-search-bookmark/commit/e12828c37a0d24e18662cb1533fd4b90855fa726))
+
 ## [2.3.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.3.0...v2.3.1) (2025-01-25)
 
 
