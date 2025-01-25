@@ -1,10 +1,11 @@
 import { readFile } from 'node:fs/promises'
+import { homedir } from 'node:os'
 import { join } from 'node:path'
 import { type IBookmark, type IBookmarkRes, type IUIBookmark, Type } from '@models/bookmark.model'
 
 const BOOKMARKS_PATH = (profiles: string[]): string[] =>
     profiles.map((profileName) =>
-        join(process.env.HOME as string, `/Library/Application Support/Google/Chrome/${profileName}/Bookmarks`),
+        join(homedir(), `/Library/Application Support/Google/Chrome/${profileName}/Bookmarks`),
     )
 
 export async function getBookmarks(profiles: string[]): Promise<IUIBookmark[]> {
