@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.3.0...v2.3.1) (2025-01-25)
+
+
+### Bug Fixes
+
+* docs about chrome profiles ([d51dcec](https://github.com/Avivbens/alfred-search-bookmark/commit/d51dcec6bfad473bcea1f910d193ef0b898127f5))
+
 # [2.3.0](https://github.com/Avivbens/alfred-search-bookmark/compare/v2.2.1...v2.3.0) (2024-07-02)
 
 
