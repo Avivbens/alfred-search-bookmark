@@ -38,7 +38,7 @@
     },
     "dependencies": {
         "fast-alfred": "^2.2.0",
-        "fuse.js": "^7.0.0"
+        "fuse.js": "^7.1.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.3.0",
