@@ -37,7 +37,7 @@
         "test": "jest"
     },
     "dependencies": {
-        "fast-alfred": "^2.2.0",
+        "fast-alfred": "^2.3.1",
         "fuse.js": "^7.0.0"
     },
     "devDependencies": {
